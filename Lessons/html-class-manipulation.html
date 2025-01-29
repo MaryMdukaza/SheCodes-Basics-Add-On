@@ -16,9 +16,6 @@
         }
 
         button {
-            font-size: 20px;
-            border-radius: 10px;
-            padding: 5px;
             background-color: black;
             color: white;
         }
@@ -33,9 +30,9 @@
 <script>
     const button = document.querySelector('button');
     button.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        button.classList.toggle('white-theme');
-        button.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
+        document.body.classList= 'dark-theme';
+        button.classList = 'white-theme';
+       
     });
 </script>
     
