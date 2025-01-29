@@ -19,16 +19,24 @@
             font-size: 20px;
             border-radius: 10px;
             padding: 5px;
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
-<body class="white-theme">
+<body>
     <div>
         <button>Dark Theme</button>
     </div>
+
 </body>
 <script>
-
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        button.classList.toggle('white-theme');
+        button.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
+    });
 </script>
     
 </html>
