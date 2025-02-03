@@ -6,7 +6,8 @@
     <title>Digital Art</title>
     <style>
       body {
-        background: plum;
+        background: radial-gradient(circle at 0.3% 1.3%, rgb(235, 217, 221) 0%, rgb(216, 174, 211) 45.1%, rgb(145, 130, 196) 100.2%);
+        font-family: sans-serif;
       }
       h1 {
         text-align: center;
@@ -36,7 +37,7 @@
       }
 
       button:hover {
-        background: plum;
+        background: #AD93C9;
         cursor: pointer;
       }
 
@@ -48,14 +49,14 @@
 
       .container {
         max-width: 650px;
-        background-color: white;
+        background: rgba(255, 255, 255, 0.8);
         padding: 20px;
         border-radius: 10px;
         margin: 20px auto;
       }
 
       .theme-button {
-        font-size: 10px;
+        font-size: 15px;
         background: black;
         color: white;
         padding: 5px 8px;
@@ -67,16 +68,16 @@
       }
 
       .dark-theme {
-        background: black;
+        background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);
         color: white;
       }
 
       .dark-theme .container {
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.2);
       }
 
       .dark-theme a {
-        color: plum;
+        color: rgb(243, 197, 243);
       }
 
 
@@ -111,7 +112,7 @@
     </style>
   </head>
   <body>
-    <button class="theme-button">Dark Theme</button>
+    <button class="theme-button">Change Theme</button>
     <div class="container">
       <h1>🎨 Digital Art</h1>
       <h2>One of my many hobbies!</h2>
@@ -153,5 +154,14 @@
       <button>Learn Digital Art</button>
     </div>
     <footer>Coded with ❤️ by Mary Mdukaza</footer>
+    <script>
+      function changeTheme () {
+        let body = document.querySelector("body")
+        body.classList.toggle("dark-theme")
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme)
+    </script>
   </body>
 </html>
