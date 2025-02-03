@@ -40,17 +40,19 @@
       button {
         display: block;
         margin: 0 auto;
-        border: 1px solid plum;
-        background: #ece4fa;
-        font-size: 20px;
-        border-radius: 8px;
-        padding: 10px 15px;
         transition: all 150ms ease-in-out;
+        font-size: 20px;
+        background: #100d18;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        border-style: none;
       }
 
       button:hover {
-        background: #ad93c9;
         cursor: pointer;
+        color: #100d18;
+        background: #ece4fa;
       }
 
       footer {
@@ -60,7 +62,7 @@
       }
 
       a {
-        color: #100d18;
+        color: #07060a;
         text-decoration: none;
       }
 
@@ -78,16 +80,16 @@
 
       .theme-button {
         font-size: 20px;
-        background: #100d18;
-        color: white;
+        background: #ece4fa;
+        color: #100d18;
         padding: 10px 18px;
         border-radius: 25px;
         border-style: none;
       }
 
       .theme-button:hover {
-        color: #100d18;
-        background: white;
+        color: #ece4fa;
+        background: #100d18;
       }
 
       .dark-theme {
@@ -104,7 +106,7 @@
       }
 
       .dark-theme a {
-        color: rgba(43, 3, 34, 0.8);
+        color: rgb(43, 3, 34);
       }
 
       .dark-theme a:hover {
@@ -167,8 +169,9 @@
         border-style: none;
         border-radius: 25px;
       }
-      .linkedin:hover{
+      .linkedin:hover {
         background: #0f79e4;
+        color: white;
       }
     </style>
   </head>
@@ -237,8 +240,15 @@
         body.classList.toggle("dark-theme");
       }
 
-      let themeButton = document.querySelector(".theme-button");
+      let themeButton = document.querySelector("button");
       themeButton.addEventListener("click", changeTheme);
+
+      function changeButtonTheme() {
+        let button = document.querySelector("button");
+        button.classList.toggle("theme-button");
+      }
+
+      themeButton.addEventListener("click", changeButtonTheme);
     </script>
   </body>
 </html>
